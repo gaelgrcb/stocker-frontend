@@ -19,10 +19,14 @@ export default function FormLoginPage() {
                 password: password,
             });
 
+            const token = response.data.token || response.data; 
+            
+            localStorage.setItem('token', token);
+
             console.log("Server Response: ", response.data);
             alert("Welcome");
 
-            window.location.href = '/dashboard';
+            window.location.href = '/inventario';
         } catch (err:any) {
             console.error("Error to login", err);
             alert(err.response?.data?.message || "We have problems connecting to the server");
