@@ -14,6 +14,7 @@ export default function FormRegisterPage() {
         name: "",
         username: "",
         email: "",
+        bussines:"",
         password: ""
     });
 
@@ -32,7 +33,7 @@ export default function FormRegisterPage() {
             localStorage.setItem("token", response.data.token);
             
             alert("¡Account created successfully!");
-            router.push("/dashboard"); // Redirigimos al inventario
+            router.push("/dashboard");
         } catch (err: any) {
             console.error(err);
             alert(err.response?.data?.message || "Error during registration");
@@ -66,6 +67,17 @@ export default function FormRegisterPage() {
                     <label className="text-gray-400 mb-1 text-sm font-medium">Username</label>
                     <input
                         name="username"
+                        type="text"
+                        required
+                        onChange={handleChange}
+                        className="bg-transparent border border-gray-700 rounded-lg p-2 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                    />
+                </div>
+                
+                <div className="flex flex-col">
+                    <label className="text-gray-400 mb-1 text-sm font-medium">Bussines Name</label>
+                    <input
+                        name="bussines"
                         type="text"
                         required
                         onChange={handleChange}

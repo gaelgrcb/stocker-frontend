@@ -15,7 +15,7 @@ interface Product {
 
 const initialFormState = { id: 0, name: '', model: '', flavor: '', cost: 0, price: 0, stock: 0 };
 
-export default function Dashboard() {
+export default function InventoryPage() {
     const [products, setProducts] = useState<Product[]>([]);
     
     const [showModal, setShowModal] = useState(false);
