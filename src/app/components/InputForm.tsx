@@ -17,7 +17,7 @@ export default function InputForm({ label, type = "text", placeholder, value, on
                 placeholder={placeholder}
                 value={value}
                 onChange={onChange}
-                className="bg-transparent border border-gray-700 rounded-lg p-2 text-white focus:outline-none focus:border-blue-500 transition-colors placeholder:text-gray-600"
+                className="bg-transparent border border-gray-700 rounded-lg p-2 text-white focus:outline-none focus:border-blue-500 transition-colors placeholder:text-gray-600 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             />
         </div>
     );
